@@ -72,6 +72,9 @@
 
 ## 2. Các loại dữ liệu được ẩn tin
 - **Image Steganography** (ẩn tin trong ảnh)
+
+![](/img/image0.png)
+
 - **Audio Steganography** (ẩn tin trong âm thanh)
 - **Video Steganography** (ẩn tin trong video)
 - **Text Steganography** (ẩn tin trong văn bản)
