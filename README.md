@@ -7,7 +7,9 @@
 ## 1. Các phương pháp ẩn tin
 - **Least Significant Bit (LSB) Steganography**
 
-    Để hiểu cách LSB hoạt động thì đầu tiên ta cần hiểu cách pixel hoạt động. Như đã biết thì pixel được định nghĩa là một điểm ảnh cấu tạo nên bởi 3 màu RGB
+    **How LSB works**  
+
+    Để hiểu cách LSB hoạt động thì đầu tiên ta cần hiểu cách pixel hoạt động. Như đã biết thì pixel được định nghĩa là một điểm ảnh cấu tạo nên bởi 3 kênh màu RGB
 
     |     | R | G | B |
     | --- |:-:|:-:|:-:|
@@ -16,6 +18,39 @@
     |Green|0|255|0|
     |Blue |0|0|255|
     |White|255|255|255|
+    
+    Từ 3 kênh màu này có thể tạo ra bất kì màu nào chúng ta muốn. 
+    
+    **Binary**
+    
+    Mỗi kênh màu của một pixel cần 1 byte = 8 bits để lưu trữ. Ví dụ cho một pixel màu xanh:
+    
+    |     | R | G | B |
+    | --- |:-:|:-:|:-:|
+    |Decimal|0|0|255|
+    |Binary |00000000|00000000|11111111|
+    
+    Vậy điều gì sẽ xảy ra nếu ra thay đổi bit cuối cùng của byte từ 255 -> 254
+    
+    |     | R | G | B |
+    | --- |:-:|:-:|:-:|
+    |Decimal|0|0|254|
+    |Binary |00000000|00000000|11111110|
+    
+    Bây giờ hãy kiểm tra màu sắc của 2 pixel này:
+    
+    ![](/img/image1.png)
+    
+    Màu sắc của 2 pixel này khá giống nhau, ngay cả khi đặt cạnh nhau mắt thường cũng không nhận ra được.
+    
+    ![](/img/image2.png)
+
+    Vì thế chúng ta có thể lưu 3 bits trên mỗi pixel và không làm màu sắc của ảnh mới thay đổi so với ảnh cũ.
+
+    **ASCII Table**
+
+    Updating....
+    
 - **DCT (Discrete Cosine Transform) Steganography**
 - **DWT (Discrete Wavelet Transform) Steganography**
 - **Spread Spectrum Steganography**
