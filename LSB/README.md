@@ -1,0 +1,1 @@
+Đây là tool để giấu tin vào ảnh và cũng đồng thời trích xuất tin bị ẩn trong ảnh (cơ bản). GUI mình code bằng GPT nên hơi lỏ, mọi người có thể base on trên đó để viết lại theo nhu cầu nhé.
