@@ -49,8 +49,20 @@
 
     **ASCII Table**
 
-    Updating....
+    Để che giấu tin nhắn, đầu tiên ta cần lấy giá trị decimal tương ứng của kí tự từ bảng ASCII. Xem ví dụ dưới đây:
+
+    > Giá trị dec của "a" trong bảng ASCII là 97, chuyển sang binary là 01100001. Để giấu kí tự "a" vào trong ảnh, ta cần lưu trữ đủ 8 bits của nó. Theo phương pháp LSB mỗi pixel có thể lưu trữ được 3 bits, chính vì thế ta cần ít nhất 3 pixels để lưu trữ 1 kí tự. Đầu tiên, ta lưu các bits 0 1 1 vào pixel đầu tiên, 0 0 0 và pixel tiếp theo, và 0 1 vào pixel thứ 3. Và ngược lại, khi lấy 8 bits cuối cùng của 3 pixels đầu tiên và chuyển lại theo bảng ASCII ta sẽ được kí tự "a".
     
+    **Mở rộng**
+    
+    Trên thực tế, không nhất thiết phải lưu trữ ở các pixel liên tục, bản chất là bit thứ 8 của mỗi kênh màu trong 1 pixel là không quan trọng. Vì thế ta có thể sử dụng một khóa để generate ra các bộ pixel để lưu trữ, điều này giúp cho bản tin được bảo mật hơn.
+    
+    **Resources**
+    
+    [LSB Steganography — Hiding a message in the pixels of an image](https://medium.com/@renantkn/lsb-steganography-hiding-a-message-in-the-pixels-of-an-image-4722a8567046).
+    
+    [Source code](https://github.com/h1n4mx0/Steganography-Research/tree/main/LSB).
+
 - **DCT (Discrete Cosine Transform) Steganography**
 - **DWT (Discrete Wavelet Transform) Steganography**
 - **Spread Spectrum Steganography**
